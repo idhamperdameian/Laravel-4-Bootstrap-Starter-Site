@@ -21,3 +21,8 @@ composer.lock
 
 # Packages
 _ide_helpers.php
+
+# Eclipse PHP IDE
+.buildpath
+.project
+.settings/
