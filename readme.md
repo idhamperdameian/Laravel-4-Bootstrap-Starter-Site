@@ -10,7 +10,7 @@ It began as a fork of [laravel4-starter-kit](https://github.com/brunogaspar/lara
 
 ## Features
 
-* Twitter Bootstrap 3.0.0
+* Bootstrap 3.0.0
 * Custom Error Pages
 	* 403 for forbidden page accesses
 	* 404 for not found pages
@@ -156,9 +156,9 @@ Run these commands to create and populate Users table:
 
 You can use artisan to do this
 
-    php artisan key:generate
+    php artisan key:generate --env=local
 
-Once you have generated your key, you might want to copy it over to your ***app/config/local/app.php*** local configuration file to have a different encryption key for each environment. A little tip, revert the key back to ***'YourSecretKey!!!'*** in ***app/config/app.php*** once you are done copying it. Now it can be generated again when you move the project to another environment.
+The `--env` option allows defining which environment you would like to apply the key generation. In our case, artisan generates your key in ***app/config/local/app.php*** and leaves ***'YourSecretKey!!!'*** in ***app/config/app.php***. Now it can be generated again when you move the project to another environment.
 
 ### Step 8: Make sure app/storage is writable by your web server.
 
